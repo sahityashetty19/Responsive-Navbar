@@ -1,0 +1,132 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	font-family:Arial,Verdana,sans-serif;
+	font-size:0.75em;
+	color:#333;
+}
+
+/*----------------Nav Bar------------------*/
+
+#nav {
+	list-style:none;
+	font-weight:bold;
+	width:auto;
+	margin-top:20px;
+	margin-right:25%;
+	margin-left:25%;
+}
+
+#nav li{
+	float:left;
+	border:1px solid #1E90FF;
+	position:relative;
+	text-align:center;
+}
+
+#nav a{
+	display:block;
+	color:#fff;
+	padding:5px;
+	background:#67AADE;
+	text-decoration:none;
+}
+
+/*------------ DROPDOWN MENU ------------*/
+
+
+
+#nav ul{
+	list-style:none;
+	position:absolute;
+  display:none; /*Hide drop-down menu till menu item is hovered*/
+}
+
+#nav ul li{
+	float:none;
+	text-align:center;
+  margin-right:0;
+}
+
+#nav ul a{
+	white-space:nowrap; /* Create dropdown menu*/
+}
+
+#nav li:hover ul { /* Display the dropdown menu on hover */
+    display: block; 
+    right: 0;
+   
+}
+
+.short{ /*Set width of dropdown menu is as wide as it's longest menu contents */ 
+  width:100%;
+}
+
+.long{ /*Set width of dropdown menu is as wide as its parent's content */ 
+  width:auto;
+}
+
+#nav li:hover a{ 
+	background:#9ACDF4;
+	text-decoration:none;
+}
+
+#nav li:hover ul a{ 
+	text-decoration:none;
+	background-color:#67AADE;
+}
+
+#nav li:hover ul li a:hover{ 
+	background:#9ACDF4;
+}
+
+.badge { /* Create a badge icon on 'Following' menu*/
+  background-color: #00ff00;
+  border-radius: 50%;
+  color: white;
+ 
+  padding: 1px 1px;
+  font-size: 10px;
+  
+  position: absolute; 
+  top: -5px;
+  right: 0;
+}
+
+
+@media screen and (max-width:1080px) and (min-width:768px){ /*Media queries used to make design responsive*/
+    #nav li {
+        position: relative;
+        margin:0px;
+    }
+    
+    ul li, li a {
+        width: auto;
+        
+    }
+    #hide {
+      display:none;
+    }
+}
+
+@media screen and (max-width:768px){
+    #nav{
+      margin-left:0%;
+      margin-top:0px;
+      margin-right:0%;
+    }
+    #nav li {
+        position: relative;
+        padding-right:10px;
+    }
+    ul li, li a {
+        width: 100%;
+    }
+    #hide {
+      display:none;
+    }
+}
